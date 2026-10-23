@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: deconverse
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: ALEXA_SKILL_ID
+        value: amzn1.ask.skill.371ee5db-dc0e-4323-8a13-f4de79fc5222

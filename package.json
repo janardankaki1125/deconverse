@@ -1,0 +1,29 @@
+{
+  "name": "deconverse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DeconVerse - homepage and 3D product explorer",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "start": "node server/production-server.cjs"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^1.1.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.186.1",
+    "express": "^4.21.2",
+    "ask-sdk-core": "^2.14.0",
+    "ask-sdk-express-adapter": "^2.14.0"
+  },
+  "engines": {
+    "node": ">=20 <25"
+  }
+}

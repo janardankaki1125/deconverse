@@ -1,0 +1,272 @@
+
+:root {
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #f4efe4;
+  background: #080a0f;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 80% 0%, #252016 0%, transparent 38%),
+    #080a0f;
+}
+
+button {
+  font: inherit;
+}
+
+.lab {
+  width: min(1100px, 100%);
+  margin: auto;
+  padding: 64px 28px 30px;
+}
+
+.eyebrow,
+.panel-number {
+  color: #c7a66b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.lab-header h1 {
+  margin: 18px 0 10px;
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 7vw, 76px);
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.lab-header h1 span {
+  color: #d8b16e;
+}
+
+.lab-header > p,
+.panel > p {
+  color: #a9a9b3;
+  line-height: 1.7;
+}
+
+.status-card,
+.panel {
+  border: 1px solid #292a32;
+  border-radius: 16px;
+  background: #11131a;
+}
+
+.status-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 34px 0 22px;
+  padding: 20px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #d8b16e;
+  box-shadow: 0 0 14px #d8b16e66;
+}
+
+.status-card p {
+  margin: 6px 0 0;
+  color: #a9a9b3;
+  font-size: 13px;
+}
+
+.status-label {
+  margin-left: auto;
+  color: #d8b16e;
+  font-size: 10px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.panel {
+  padding: 26px;
+}
+
+.panel h2 {
+  margin: 18px 0 8px;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.preview-placeholder {
+  display: grid;
+  min-height: 180px;
+  margin: 22px 0;
+  place-content: center;
+  justify-items: center;
+  border: 1px dashed #393943;
+  border-radius: 12px;
+  background: #0a0c12;
+  color: #a9a9b3;
+}
+
+.preview-placeholder span {
+  color: #d8b16e;
+  font-size: 48px;
+}
+
+.preview-placeholder p {
+  font-size: 12px;
+}
+
+.gesture-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  min-height: 180px;
+  align-content: center;
+  margin: 22px 0;
+}
+
+.gesture-chips span {
+  padding: 10px 12px;
+  border: 1px solid #393943;
+  border-radius: 30px;
+  color: #e4d4b7;
+  font-size: 12px;
+}
+
+.panel button {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #393943;
+  border-radius: 8px;
+  background: #1a1c24;
+  color: #777984;
+}
+
+footer {
+  padding-top: 34px;
+  color: #666874;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .lab {
+    padding: 38px 18px 24px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-card {
+    align-items: flex-start;
+  }
+
+  .status-label {
+    font-size: 9px;
+  }
+}
+
+.camera-preview {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  margin: 22px 0;
+  border: 1px solid #393943;
+  border-radius: 12px;
+  background: #05070d;
+}
+
+.camera-preview video,
+.camera-preview canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: contain;
+  transform: scaleX(-1);
+}
+
+.camera-preview canvas {
+  pointer-events: none;
+}
+
+.camera-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #a9a9b3;
+  font-size: 13px;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+}
+
+.button-row button {
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #6b5637;
+  border-radius: 8px;
+  background: #d8b16e;
+  color: #17120b;
+  cursor: pointer;
+}
+
+.button-row button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.status-dot.active {
+  background: #65d99a;
+  box-shadow: 0 0 14px #65d99a66;
+}
+
+.gesture-result {
+  display: grid;
+  min-height: 150px;
+  place-items: center;
+  margin: 22px 0;
+  border: 1px solid #393943;
+  border-radius: 12px;
+  background: #0a0c12;
+  color: #e8bd78;
+  font-family: Georgia, serif;
+  font-size: clamp(24px, 4vw, 38px);
+  text-align: center;
+}
+
+.error-box {
+  margin: 16px 0;
+  padding: 14px;
+  border: 1px solid #9b4c4c;
+  border-radius: 8px;
+  background: #291315;
+  color: #ffc4c4;
+  overflow-wrap: anywhere;
+}
+
+.note {
+  color: #a9a9b3;
+  font-size: 12px;
+  line-height: 1.7;
+}
